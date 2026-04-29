@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<style>
+    body {
+    transition: all 0.5s ease;
+}
+</style>
+
+<body>
+    <h1>Olá mundo</h1>
+
+   
+    <div id="container" style="padding: 20px; text-align: center; border: 2px solid #ccc;">
+        <h1 id="titulo">O que vai acontecer?</h1>
+        <input type="text" id="campoTexto" placeholder="Digite 'rj', 'sp', 'mg' ou 'es'">
+        <button onclick="verificar()">Executar</button>
+    </div>
+<script>
+        function verificar() {
+            const input = document.getElementById('campoTexto').value.toLowerCase();
+            const titulo = document.getElementById('titulo');
+            const corpo = document.body;
+
+            if (input === 'rj') {
+                titulo.innerText = "Bem vindo ao Rio de Janeiro! ☀️";
+                corpo.style.backgroundColor = "#2c3e50";
+                corpo.style.color = "#87ceeb";
+
+            } else if (input === 'sp') {
+                titulo.innerText = "Bem vindo a São Paulo! 🏙️";
+                corpo.style.backgroundColor = "#95a5a6";
+                corpo.style.color = "black";
+
+            } else if (input === 'mg') {
+                titulo.innerText = "Bem vindo a Minas Gerais! 🧀";
+                corpo.style.backgroundColor = "#f1c40f";
+                corpo.style.color = "black";
+
+            } else if (input === 'es') {
+                titulo.innerText = "Bem vindo ao Espírito Santo! 🌴";
+                corpo.style.backgroundColor = "#27ae60";
+                corpo.style.color = "black";
+
+            } else {
+                titulo.innerText = "Comando desconhecido... 🤔";
+                corpo.style.backgroundColor = "white";
+                corpo.style.color = "black";
+         }
+        }
+        // let a,b,r;
+        // a = Number(prompt("Entre com o valor de A:: "));
+        // b = Number(prompt("Entre com o valor de B:: "));
+        // r = a + b;
+        // if(r <= 10){
+        //     console.log("A soma de "+ a +" com "+b+" é menor que 10 tendo como resultado "+r);
+        //     console.log(`A soma de ${a} com ${b} é menor que 10 tendo resultado igual a  ${r}`);
+        // }
+
+
+
+        //Crie um algoritmo que verifica se você sabe a senha de entrada na taverna
+        // let senha = "bem vindo ao senai";
+        // let resposta = prompt("Qual é a senha");
+
+        // if(senha === resposta){
+        //     console.log("pode entrar");
+        // }else{
+        //     console.log("Senha incorreta!");
+        // }
+
+    </script>
+</body>
+
+</html>
